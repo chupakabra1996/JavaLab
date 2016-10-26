@@ -1,0 +1,11 @@
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.uri=jdbc:mysql://localhost:3306/database_name?characterEncoding=UTF-8
+db.user=your_login
+db.password=your_password
+
+#Hibernate Configuration:
+hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+hibernate.show_sql=true
+entitymanager.packages.to.scan=ru.kpfu.itis.javalab
+hibernate.hbm2ddl.auto=create
+hibernate.enable_lazy_load_no_trans=true
