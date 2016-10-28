@@ -184,6 +184,13 @@
             <version>5.1.38</version>
         </dependency>
 
+        <!--Derby in memory database-->
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.12.1.1</version>
+        </dependency>
+
 
         <!--logging-->
         <dependency>
