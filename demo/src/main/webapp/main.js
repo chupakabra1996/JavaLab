@@ -97,14 +97,39 @@ class ContactForm extends React.Component {
         this.setState({phone : e.target.value});
     }
 
+    isValid(contact) {
+        let stat = true;
+        if (!contact.name || contact.name === '') {
+            alert('name is not valid');
+            stat = false;
+        }
+        if (!contact.address || contact.address === '') {
+            alert('address is not valid');
+            stat = false;
+        }
+        if (!contact.phone || contact.phone === '') {
+            alert('phone is not valid');
+            stat = false;
+        }
+        return stat;
+    }
+
     onSubmit(e) {
         e.preventDefault();
         let contact = {name : this.state.name, address : this.state.address, phone : this.state.phone};
+
+        if (!this.isValid(contact)) {
+            return;
+        }
+
         this.props.onFormSubmit(contact, ()=> {
             document.getElementById('contactForm').reset();
             this.setState({name : '', address : '', phone : ''});
         });
     }
+
+
+
 
     render() {
         return (
