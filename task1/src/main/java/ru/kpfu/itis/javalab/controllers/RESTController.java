@@ -31,13 +31,6 @@ public class RESTController {
     @RequestMapping(value = "/contact/{id}", method = RequestMethod.GET)
     public ResponseEntity<Contact> getContact(@PathVariable Long id) {
 
-        log.debug("DEBUG");
-
-        log.info("INFO");
-
-        log.error("ERROR");
-
-
         if (id == null || !contactService.isExist(id)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

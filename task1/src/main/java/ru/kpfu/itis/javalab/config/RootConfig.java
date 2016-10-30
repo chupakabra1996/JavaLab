@@ -37,6 +37,7 @@ public class RootConfig {
         return managerDataSource;
     }
 
+
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 
