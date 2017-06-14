@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Index</title>
+</head>
+<body>
+    <div style="padding: 20px;">
+
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Stars</th>
+                <th>Forks</th>
+            </tr>
+            </thead>
+
+            <tbody>
+                <tr th:if="${repos != null}" th:each="repo : ${repos}">
+                    <td th:text="${repo.id}"></td>
+                    <td th:text="${repo.fullName}"></td>
+                    <td th:text="${repo.starsCount}"></td>
+                    <td th:text="${repo.forksCount}"></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+</html>
